@@ -1,28 +1,151 @@
-<!doctype html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="Mega Imports. Tecnologia e importados selecionados. Atacado e varejo, com envio para todo o Brasil.">
-<title>Mega Imports | Tecnologia e Importados</title>
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#050505">
+<title>Mega Imports | O essencial. Em outro nível.</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: #e9d4a8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%, #493012 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 40%, #18120b 0%, #050505 70%);
+}
+
+main::before, main::after {
+  content: "";
+  position: absolute;
+  width: 90vw;
+  height: 45vw;
+  border-top: 1px solid #ad824b;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 12px #b88940);
+  pointer-events: none;
+}
+
+main::before {
+  top: -18vw;
+  left: -45vw;
+  transform: rotate(-30deg);
+}
+
+main::after {
+  bottom: -20vw;
+  right: -45vw;
+  transform: rotate(-30deg);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.line {
+  width: 65px;
+  height: 1px;
+  margin: 0 auto 22px;
+  background: linear-gradient(90deg, transparent, #d4a65c, transparent);
+}
+
+.slogan {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.btn {
+  display: block;
+  padding: 20px 14px;
+  margin: 14px 0;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  color: #17110a;
+  background: linear-gradient(120deg, #f0d69c, #c99a4d, #e7c581);
+  box-shadow: 0 0 30px #a87a3640;
+}
+
+.secondary {
+  color: #e9d4a8;
+  border: 1px solid #b28a50;
+  background: #080706;
+}
+
+@media (max-width: 600px) {
+  .logo { max-width: 290px; }
+  .slogan { font-size: 9px; letter-spacing: 2px; }
+  .btn { font-size: 11px; }
+}
+</style>
 </head>
 <body>
-<div class="page">
-  <header class="topbar"><span class="wordmark">MEGA <span>IMPORTS</span></span><span class="topnote">LOJA ONLINE</span></header>
-  <main class="hero">
-    <div class="symbol" aria-hidden="true">M</div>
-    <p class="eyebrow">SELEÇÃO EXCLUSIVA</p>
-    <h1>O essencial.<br><em>Em outro nível.</em></h1>
-    <p class="intro">Tecnologia e importados selecionados para quem valoriza qualidade e boas oportunidades.</p>
-    <div class="actions">
-      <a class="button primary" href="https://chat.whatsapp.com/Kma4haV64ZdJEpxClcgzvI?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4&amp;iam=2" target="_blank" rel="noopener noreferrer">Entrar no grupo de ofertas <span aria-hidden="true">↗</span></a>
-      <a class="button outline" href="https://wa.me/5598984389727?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20comprar%20no%20atacado%20da%20Mega%20Imports." target="_blank" rel="noopener noreferrer">Comprar no atacado <span aria-hidden="true">↗</span></a>
-    </div>
-    <p class="shipping">ATACADO &amp; VAREJO <span>·</span> ENVIO PARA TODO O BRASIL</p>
-  </main>
-  <footer><span>© 2026 MEGA IMPORTS</span><span>EXCLUSIVIDADE EM CADA ESCOLHA</span></footer>
-</div>
+<main>
+  <div class="content">
+
+    <img
+      class="logo"
+      src="logo.png"
+      alt="Mega Imports"
+    >
+
+    <div class="line"></div>
+
+    <p class="slogan">O essencial. Em outro nível.</p>
+
+    <a class="btn primary"
+       href="https://chat.whatsapp.com/Kma4haV64ZdJEpxClcgzvI"
+       target="_blank" rel="noopener noreferrer">
+      Entrar no grupo de ofertas ↗
+    </a>
+
+    <a class="btn secondary"
+       href="https://wa.me/5598984389727?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20comprar%20no%20atacado%20da%20Mega%20Imports."
+       target="_blank" rel="noopener noreferrer">
+      Comprar no atacado ↗
+    </a>
+
+  </div>
+</main>
 </body>
 </html>
