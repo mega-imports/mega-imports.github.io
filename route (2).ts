@@ -1,3 +1,0 @@
-import {NextResponse} from 'next/server';
-import {serverClient} from '../../../lib/supabase';
-export async function POST(req:Request){try{const b=await req.json();if(typeof b.slug!=='string'||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(b.slug)||!['acesso','grupo_whatsapp','atacado_whatsapp'].includes(b.tipo))return NextResponse.json({error:'Inválido'},{status:400});const db=serverClient();const {data}=await db.from('vendedores').select('id').eq('slug',b.slug).eq('ativo',true).maybeSingle();if(!data)return NextResponse.json({error:'Não encontrado'},{status:404});const {error}=await db.from('eventos').insert({vendedor_id:data.id,tipo:b.tipo});if(error)throw error;return NextResponse.json({ok:true})}catch{return NextResponse.json({error:'Falha no registro'},{status:500})}}
