@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { ../../../../lib/supabase } from '../../../../lib/supabase';
-
+import { serverClient, verifyAdmin } from '../../../../lib/supabase';
 export async function GET(req: Request) {
   if (!(await verifyAdmin(req))) {
     return NextResponse.json(
